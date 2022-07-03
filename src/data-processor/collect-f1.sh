@@ -1,0 +1,1 @@
+curl -o ./src/model/f1.json --location --request GET 'http://ergast.com/api/f1/current.json'
