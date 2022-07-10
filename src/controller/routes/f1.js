@@ -1,11 +1,11 @@
 export function nextRace() {
-    return 'next race';
+    return '**next race** is something';
 };
 
 export function driversStandings() {
-    return 'Driver\'s standings';
+    return 'Drivers standings';
 }
 
 export function constructorsStandings() {
-    return 'Constructor\'s standings';
+    return 'Constructors standings';
 }
