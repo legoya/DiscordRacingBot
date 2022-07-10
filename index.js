@@ -1,9 +1,8 @@
 // import { nextRace } from './src/application/race-queries.js';
 // import { buildNextRaceStr } from './src/utils/time-format-utils.js';
+import { nextRace, driversStandings, constructorsStandings } from './src/controller/routes/f1.js'
 import { Client, Intents } from 'discord.js';
 import { readFileSync } from 'fs';
-
-// const f1Data = JSON.parse(readFileSync('./src/model/f1-schedule.json'));
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const prefix = '!!';
@@ -17,15 +16,19 @@ client.on('messageCreate', message => {
     const command = args.shift().toLowerCase();
 
     switch (command) {
-        // case 'f1-next':
-        //     const [race, timeTilRace] = nextRace(f1Data.MRData.RaceTable.Races)
-        //     message.channel.send(buildNextRaceStr(race, timeTilRace));
-        // break;
+        case 'f1-next':
+            // const [race, timeTilRace] = nextRace(f1Data.MRData.RaceTable.Races)
+            // message.channel.send(buildNextRaceStr(race, timeTilRace));
+            // return nextRace();
+            message.channel.send(nextRace());
+        break;
         case 'f1-wdc':
-            message.channel.send('Driver\'s standings coming soon!');
+            message.channel.send(driversStandings());
+            // message.channel.send('Driver\'s standings coming soon!');
         break;
         case 'f1-wcc':
-            message.channel.send('Constructor\'s standings coming soon!');
+            message.channel.send(constructorsStandings());
+            // message.channel.send('Constructor\'s standings coming soon!');
         break;
         case 'help':
             message.channel.send(
