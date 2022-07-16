@@ -1,5 +1,5 @@
-import { formatTimeFromMS, eventTimeStatus } from '../helpers/time-helpers.js'
-import { SPINT_DURRATION_MS, QUAL_DURRATION_MS } from '../f1-race-constants.js'
+import { formatTimeFromMS, eventTimeStatus } from '../helpers/time-helpers.js';
+import { SPINT_DURRATION_MS, QUAL_DURRATION_MS } from '../f1-race-constants.js';
 
 
 export function detailedRaceView(race, now) {

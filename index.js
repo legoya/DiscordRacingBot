@@ -2,8 +2,10 @@ import { readFileSync } from 'fs';
 import { Client, Intents } from 'discord.js';
 
 import { nextRace } from './src/controller/f1-race-controller.js';
-import { driversStandings, constructorsStandings } from './src/controller/f1-standings-controller.js';
+import { driversStandings } from './src/controller/f1-driver-standings-controller.js';
+import { constructorsStandings } from './src/controller/f1-constructor-standings-controller.js';
 
+constructorsStandings
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const prefix = '!!';
