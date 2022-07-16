@@ -11,7 +11,3 @@ export function driversStandings() {
 
     return message.trim();
 }
-
-export function constructorsStandings() {
-    return 'Constructors standings';
-}

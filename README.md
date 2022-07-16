@@ -1,11 +1,10 @@
 # RacingBot
-Discord bot for various motor-racing related queries and functions
+Discord bot for various formula1 related queries.
 
 
 # TODO
-Race string builder.
-    w/ quali and sprint races.
-Add WDC and WCC routes.
-Run collect-f1.sh on cron every 48hrs.
-Get race video links from YT.
+create update.sh to run as a cron job every 48hrs.
+update docs and add feature list.
 
+# FUTURE
+Get race video links from YT.
