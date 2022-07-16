@@ -1,6 +1,9 @@
-import { nextRace } from './src/controller/f1-race-controller.js'
-import { Client, Intents } from 'discord.js';
 import { readFileSync } from 'fs';
+import { Client, Intents } from 'discord.js';
+
+import { nextRace } from './src/controller/f1-race-controller.js';
+import { driversStandings, constructorsStandings } from './src/controller/f1-standings-controller.js';
+
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const prefix = '!!';

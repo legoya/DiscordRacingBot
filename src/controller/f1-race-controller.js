@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { detailedRaceView } from '../view/f1-race-view.js';
-import { RACE_DURRATION_MS } from '../f1-race-constants.js'
+import { RACE_DURRATION_MS } from '../f1-race-constants.js';
 
 
 export function nextRace() {
