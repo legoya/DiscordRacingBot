@@ -1,9 +1,9 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 
-extractRaceSchedule(JSON.parse(readFileSync('./src/model/raw/f1-schedule.json', 'utf8')));
-extractDriverStandings(JSON.parse(readFileSync('./src/model/raw/f1-wdc-standings.json', 'utf8')));
-extractWCCStandings(JSON.parse(readFileSync('./src/model/raw/f1-wcc-standings.json', 'utf8')));
+extractRaceSchedule(JSON.parse(readFileSync('./src/data/f1-schedule.json', 'utf8')));
+extractDriverStandings(JSON.parse(readFileSync('./src/data/f1-wdc-standings.json', 'utf8')));
+extractWCCStandings(JSON.parse(readFileSync('./src/data/f1-wcc-standings.json', 'utf8')));
 
 
 function extractRaceSchedule(scheduleData) {

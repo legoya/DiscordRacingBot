@@ -1,6 +1,4 @@
-// import { nextRace } from './src/application/race-queries.js';
-// import { buildNextRaceStr } from './src/utils/time-format-utils.js';
-import { nextRace, driversStandings, constructorsStandings } from './src/controller/routes/f1.js'
+import { nextRace } from './src/controller/f1-race-controller.js'
 import { Client, Intents } from 'discord.js';
 import { readFileSync } from 'fs';
 
@@ -17,18 +15,13 @@ client.on('messageCreate', message => {
 
     switch (command) {
         case 'f1-next':
-            // const [race, timeTilRace] = nextRace(f1Data.MRData.RaceTable.Races)
-            // message.channel.send(buildNextRaceStr(race, timeTilRace));
-            // return nextRace();
             message.channel.send(nextRace());
         break;
         case 'f1-wdc':
             message.channel.send(driversStandings());
-            // message.channel.send('Driver\'s standings coming soon!');
         break;
         case 'f1-wcc':
             message.channel.send(constructorsStandings());
-            // message.channel.send('Constructor\'s standings coming soon!');
         break;
         case 'help':
             message.channel.send(
