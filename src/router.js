@@ -1,5 +1,4 @@
 import { helpMessageFromRoutes } from './helpers/help-message-builder.js';
-
 import { nextRace } from './controller/f1-race-controller.js';
 import { driversStandings } from './controller/f1-driver-standings-controller.js';
 import { constructorsStandings } from './controller/f1-constructor-standings-controller.js';
