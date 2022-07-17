@@ -8,7 +8,7 @@ The bot current responds to commands:
 * `f1-wcc`: lists the constructors' championship standings, ranked first to last.
 
 ## Acknowledgements
-This programm makes use of ergast.com as the **[`API for collecting F1 data`](https://ergast.com/mrd/)**.
+This program makes use of ergast.com as the **[`API for collecting F1 data`](https://ergast.com/mrd/)**.
 
 ## Bot Setup and Configuration
 To re-use this bot code as a template, you will need to **[`set up a discord application and bot`](https://discordpy.readthedocs.io/en/stable/discord.html)**. During the creation process, a token will be generated; paste this token in to a file called `token.txt` in the root directory of this project.
@@ -18,16 +18,18 @@ If added to the correct location, the project should resemble:
 ```
 .
 ├── src
-│   ├── controller          # Applies logic in incoming requests
-│   ├── data                # Collect and process raw data from APIs
-│   ├── helpers             # Utilities
-│   ├── model               # Representation of data used for queries
-│   └── view                # Formatting and display lo
-├── config.js               # Paramaters for defining behaviour and logic
-├── index.js                # Root of the program
-├── start-up.sh             # Script to update and start bot (use this to run the bot)
-├── token.txt               # Store token provided by discord
-└── ...                     # Some other files and folders will exist as this level
+│   ├── controller          # Applies logic in incoming requests.
+│   ├── data                # Collect, cache and process raw data from APIs.
+│   ├── helpers             # Utilities.
+│   ├── model               # Representation of data used for queries.
+│   ├── view                # Formatting and display logic.
+│   └── router.js           # Maps supported commands to controllers.
+├── config.js               # Paramaters for defining behaviour and logic.
+├── index.js                # Root of the program.
+├── start-up.sh             # Script to update and start bot (use this to run the bot).
+├── update.sh               # Run periodically to refresh data.
+├── token.txt               # Store token provided by discord.
+└── ...                     # Some other files and folders will exist as this level.
 ```
 
 ## Using the Bot
