@@ -10,10 +10,28 @@ The bot current responds to commands:
 ## Acknowledgements
 This programm makes use of ergast.com as the **[`API for collecting F1 data`](https://ergast.com/mrd/)**.
 
-## Using or Interacting with the Bot
+## Bot Setup and Configuration
 To re-use this bot code as a template, you will need to **[`set up a discord application and bot`](https://discordpy.readthedocs.io/en/stable/discord.html)**. During the creation process, a token will be generated; paste this token in to a file called `token.txt` in the root directory of this project.
 
-**To start the bot, run start-up.sh.**
+If added to the correct location, the project should resemble:
+
+```
+.
+├── src
+│   ├── controller          # Applies logic in incoming requests
+│   ├── data                # Collect and process raw data from APIs
+│   ├── helpers             # Utilities
+│   ├── model               # Representation of data used for queries
+│   └── view                # Formatting and display lo
+├── config.js               # Paramaters for defining behaviour and logic
+├── index.js                # Root of the program
+├── start-up.sh             # Script to update and start bot (use this to run the bot)
+├── token.txt               # Store token provided by discord
+└── ...                     # Some other files and folders will exist as this level
+```
+
+## Using the Bot
+**To start the bot, run [`start-up.sh`](https://github.com/legoya/DiscordRacingBot/blob/main/start-up.sh)**
 
 A file update.sh is also provided and is designed to be run periodically to continously refresh the data and model so the bot is able to provide up-to-date information.
 
